@@ -1,13 +1,14 @@
+<img src="/1.jpg" width="40%"> &nbsp; <img src="/2.jpg" width="40%">
 # Flutter Create
 A simple application for [Flutter Create Participation](https://flutter.dev/create)
 
 ## Description
-<img src="/1.png" width="40%"> &nbsp; <img src="/1.gif" width="40%">
+<img src="/1.gif">
 
 This is the most useless application in the world. When launched, the application loads data from my firebase and displays it as if it were code in a text editor.
 Next, the user must reduce the amount of code by clicking on the words.
 
-<img src="/2.png" width="40%"> &nbsp; <img src="/2.gif" width="40%">
+<img src="/2.gif" >
 
 When the user deletes all unnecessary words, a new useless screen will open, on which the user can write a post on Twitter.
 
