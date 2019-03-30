@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_share_me/flutter_share_me.dart';
 
-// text, lang, class, func, symb
 const offset = 10.0;
 const padding = EdgeInsets.all(offset);
 
 void main() => runApp(
 MaterialApp(
 title: 'Flutter Create',
+debugShowCheckedModeBanner: false,
 theme: ThemeData(
 accentColorBrightness: Brightness.dark,
 textTheme: TextTheme(
 title: TextStyle(
 fontSize: 22, fontFamily: 'Lobster', color: Colors.white))),
-home: Sharing(),
+home: Editor(),
 routes: {'/share': (_) => Sharing()},
 ),
 );
@@ -80,7 +80,7 @@ colors: [
 
 class Code extends StatefulWidget {
 final List<Line> code;
-final List<Color> colors;
+final List<Color> colors; // text, var, class, func, symb
 
 Code({Key key, @required this.code, @required this.colors}) : super(key: key);
 
@@ -165,10 +165,7 @@ splashColor: clr.withAlpha(70),
 child: Container(
 padding: padding,
 color: clr.withAlpha(15),
-child: Text(
-w.s,
-style: Theme.of(context).textTheme.title.copyWith(color: clr),
-),
+child: Text(w.s, style: Theme.of(context).textTheme.title.copyWith(color: clr)),
 ),
 );
 }
@@ -212,7 +209,7 @@ icon: Icon(Icons.share),
 label: Text('Share', style: style),
 onPressed: () async {
 if (await FlutterShareMe().shareToTwitter(
-msg: 'I ❤️ Flutter! #flutter #FlutterCreate') ==
+msg: 'I ❤️ Flutter! #Flutter #FlutterCreate') ==
 'success') {
 setState(() {
 _who = 'We';
