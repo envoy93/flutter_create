@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_share_me/flutter_share_me.dart';
+import 'package:share/share.dart';
 
 const offset = 10.0;
 const padding = EdgeInsets.all(offset);
@@ -165,7 +165,8 @@ splashColor: clr.withAlpha(70),
 child: Container(
 padding: padding,
 color: clr.withAlpha(15),
-child: Text(w.s, style: Theme.of(context).textTheme.title.copyWith(color: clr)),
+child: Text(w.s,
+style: Theme.of(context).textTheme.title.copyWith(color: clr)),
 ),
 );
 }
@@ -208,15 +209,11 @@ backgroundColor: Colors.redAccent,
 icon: Icon(Icons.share),
 label: Text('Share', style: style),
 onPressed: () async {
-if (await FlutterShareMe().shareToTwitter(
-msg: 'I ❤️ Flutter! #Flutter #FlutterCreate') ==
-'success') {
 setState(() {
 _who = 'We';
 });
-}
-},
-),
+Share.share('I ❤️ Flutter! #Flutter #FlutterCreate');
+}),
 );
 }
 }
