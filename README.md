@@ -7,10 +7,7 @@ A simple application for [Flutter Create Participation](https://flutter.dev/crea
 
 This is the most useless application in the world. When launched, the application loads data from my firebase and displays it as if it were code in a text editor.
 Next, the user must reduce the amount of code by clicking on the words.
-
-<img src="/2.gif" >
-
-When the user deletes all unnecessary words, a new useless screen will open, on which the user can write a post on Twitter.
+When the user deletes all unnecessary words, a new useless screen will open, on which the user can share a post.
 
 _In this app I used a database, animations, some material widgets, a custom font._
 
