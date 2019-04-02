@@ -1,6 +1,7 @@
-<img src="/1.jpg" width="40%"> &nbsp; <img src="/2.jpg" width="40%">
 # Flutter Create
 A simple application for [Flutter Create Participation](https://flutter.dev/create)
+
+<img src="/1.jpg" width="40%"> &nbsp; <img src="/2.jpg" width="40%">
 
 ## Description
 <img src="/1.gif">
@@ -29,6 +30,6 @@ Since I don't have a Mac OS, I could not add Cloud Firestore support for iOS, so
 
 ## Packages Used
  - [cloud_firestore](https://pub.dartlang.org/packages/cloud_firestore)
- - [flutter_share_me](https://pub.dartlang.org/packages/flutter_share_me)
+ - [flutter_share_me](https://pub.dartlang.org/packages/share)
 
 ##### Created by Kirill Shashov, March 2019
